@@ -41,7 +41,7 @@ return {
 
       provider = "ollama",
       ollama = {
-        endpoint = "http://172.31.32.1:11434", -- Note that there is no /v1 at the end.
+        endpoint = "http://localhost:11434", -- Note that there is no /v1 at the end.
         model = "qwen2.5-coder:7b",
       },
     },
