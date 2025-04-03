@@ -1,12 +1,12 @@
 return {
   -- add gruvbox
-  { "neanias/everforest-nvim" },
+  { "samharju/synthweave.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "synthweave",
     },
   },
 }
