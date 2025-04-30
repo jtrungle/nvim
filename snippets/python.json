@@ -1,0 +1,31 @@
+{
+  "Stateless Widget Plugin": {
+    "prefix": "stl",
+    "body": [
+      "from rs_nicegui.components.base import StatelessBaseWidget",
+      "",
+      "class ${1:name}(StatelessBaseWidget):",
+      "    @ui.refreshable_method",
+      "    def build(self):",
+      "        pass",
+      "        $0"
+    ],
+    "description": "StatelessBaseWidget class with build method"
+  },
+  "Stateful Widget Plugin": {
+    "prefix": "stf",
+    "body": [
+      "from rs_nicegui.components.base import StatefulBaseWidget",
+      "",
+      "class ${1:name}(StatefulBaseWidget):",
+      "",
+      "    state_cls: ${2:state_class}",
+      "",
+      "    @ui.refreshable_method",
+      "    def build(self):",
+      "        pass",
+      "        $0"
+    ],
+    "description": "StatelessBaseWidget class with build method"
+  }
+}

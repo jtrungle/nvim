@@ -1,5 +1,5 @@
 return {
-  enabled = true,
+  enabled = false,
   "rcarriga/nvim-dap-ui",
   dependencies = { "nvim-neotest/nvim-nio" },
   -- stylua: ignore
