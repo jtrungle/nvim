@@ -26,6 +26,16 @@
       "        pass",
       "        $0"
     ],
-    "description": "StatelessBaseWidget class with build method"
+    "description": "StatefulBaseWidget class with build method"
+  },
+  "Refreshable Method": {
+    "prefix": "defr",
+    "body": [
+      "@ui.refreshable_method",
+      "def ${1:fname}(self):",
+      "    pass",
+      "    $0"
+    ],
+    "description": "refreshable build method"
   }
 }

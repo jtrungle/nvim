@@ -1,0 +1,14 @@
+{
+  "typechecking": {
+    "prefix": "iftype",
+    "body": [
+      "from __future__ import annotations",
+      "import typing",
+      "",
+      "if typing.TYPE_CHECKING:",
+      "    ${1:import}",
+      "    $0"
+    ],
+    "description": "add import type checking"
+  }
+}

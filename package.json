@@ -6,7 +6,13 @@
         "language": [
           "python"
         ],
-        "path": "snippets/python.json"
+        "path": "snippets/rs_nicegui.json"
+      },
+      {
+        "language": [
+          "python"
+        ],
+        "path": "snippets/typing.json"
       }
     ]
   }

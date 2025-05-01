@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "dD", "ddgg_P<C-o>==", { noremap = true, silent = true }) -- move line to top
 vim.keymap.set("n", "<leader>rr", function()
   require("dap").restart()
 end, { desc = "Restart" })
