@@ -3,6 +3,7 @@
     "prefix": "stl",
     "body": [
       "from rs_nicegui.components.base import StatelessBaseWidget",
+      "from nicegui import ui",
       "",
       "class ${1:name}(StatelessBaseWidget):",
       "    @ui.refreshable_method",
@@ -16,6 +17,7 @@
     "prefix": "stf",
     "body": [
       "from rs_nicegui.components.base import StatefulBaseWidget",
+      "from nicegui import ui",
       "",
       "class ${1:name}(StatefulBaseWidget):",
       "",

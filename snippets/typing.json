@@ -10,5 +10,14 @@
       "    $0"
     ],
     "description": "add import type checking"
+  },
+  "logger": {
+    "prefix": "getlog",
+    "body": [
+      "import logging",
+      "",
+      "logger = logging.getLogger(__name__)$0"
+    ],
+    "description": "add logger to file"
   }
 }
