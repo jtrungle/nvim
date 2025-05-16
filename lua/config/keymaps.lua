@@ -4,7 +4,9 @@
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "dD", "ddgg_P<C-o>==", { noremap = true, silent = true }) -- move line to top
+vim.api.nvim_set_keymap("n", "yA", ":%y<CR>", { noremap = true, silent = true }) -- move line to top
 vim.keymap.set("n", "<leader>rr", function()
+  vim.cmd("write")
   require("dap").restart()
 end, { desc = "Restart" })
 vim.keymap.set("n", "<leader>dv", function()
