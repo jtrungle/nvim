@@ -20,3 +20,9 @@ vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, si
 
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
+
+local betterTerm = require("betterTerm")
+-- toggle firts term
+vim.keymap.set({ "n", "t" }, "<C-;>", betterTerm.open, { desc = "Open terminal" })
+-- Select term focus
+vim.keymap.set({ "n" }, "<leader>tt", betterTerm.select, { desc = "Select terminal" })
