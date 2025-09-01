@@ -60,8 +60,8 @@ return {
         {
           type = "node",
           request = "launch",
-          name = "pick script (pnpm)",
-          runtimeExecutable = "pnpm",
+          name = "pick script (npm)",
+          runtimeExecutable = "npm",
           runtimeArgs = { "run", pick_script },
           cwd = "${workspaceFolder}",
         },
