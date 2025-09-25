@@ -33,3 +33,39 @@ vim.keymap.set({ "n" }, "<leader>tt", betterTerm.select, { desc = "Select termin
 vim.api.nvim_create_user_command("YankFilePath", function()
   vim.fn.setreg("+", vim.fn.expand("%:p"))
 end, {})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt_local.conceallevel = 0 -- start shown
+    vim.opt_local.concealcursor = "n"
+
+    -- Match single-line comments, including indented ones
+    vim.cmd([[
+      syntax match PythonComment "^\s*#.*" conceal
+    ]])
+
+    -- Toggle keybind
+    vim.keymap.set("n", "<leader>hc", function()
+      if vim.opt_local.conceallevel:get() == 0 then
+        vim.opt_local.conceallevel = 2
+      else
+        vim.opt_local.conceallevel = 0
+      end
+    end, { buffer = true, desc = "Toggle conceal for comments/docstrings" })
+  end,
+})
+
+-- ~/.config/nvim/lua/plugins/hidecomments.lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt_local.foldmethod = "expr"
+    vim.opt_local.foldexpr = "v:lua.require'fold'.foldexpr()"
+    vim.opt_local.foldenable = false
+
+    vim.keymap.set("n", "<leader>hd", function()
+      vim.cmd("normal! zM")
+    end, { buffer = true, desc = "Fold comments + docstrings" })
+  end,
+})
