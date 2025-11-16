@@ -7,7 +7,7 @@ return {
     },
     keys = {
       {
-        "<leader>gd",
+        "<leader>gD",
         function()
           if next(require("diffview.lib").views) == nil then
             vim.cmd("DiffviewOpen")
