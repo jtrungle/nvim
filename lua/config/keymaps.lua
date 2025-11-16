@@ -28,7 +28,10 @@ local betterTerm = require("betterTerm")
 -- toggle firts term
 vim.keymap.set({ "n", "t" }, "<C-;>", betterTerm.open, { desc = "Open terminal" })
 -- Select term focus
-vim.keymap.set({ "n" }, "<leader>tt", betterTerm.select, { desc = "Select terminal" })
+vim.keymap.set({ "n" }, "<leader>Tt", betterTerm.select, { desc = "Select terminal" })
+
+-- Rename the current terminal
+vim.keymap.set("n", "<leader>Tr", betterTerm.rename, { desc = "Rename terminal" })
 
 vim.api.nvim_create_user_command("YankFilePath", function()
   vim.fn.setreg("+", vim.fn.expand("%:p"))
