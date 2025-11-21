@@ -22,7 +22,7 @@ vim.cmd([[cab cc CodeCompanion]])
 
 local betterTerm = require("betterTerm")
 -- toggle firts term
-vim.keymap.set({ "n", "t" }, "<C-;>", betterTerm.open, { desc = "Open terminal" })
+vim.keymap.set({"n", "t"}, "<C-_>", function() betterTerm.open() end, { desc = "Toggle terminal" })
 -- Select term focus
 vim.keymap.set({ "n" }, "<leader>Tt", betterTerm.select, { desc = "Select terminal" })
 
@@ -68,3 +68,58 @@ vim.api.nvim_create_autocmd("FileType", {
     end, { buffer = true, desc = "Fold comments + docstrings" })
   end,
 })
+
+
+
+-- browse
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>Gl",
+  "<cmd>GitLink<cr>",
+  { silent = true, noremap = true, desc = "Yank git permlink" }
+)
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>GL",
+  "<cmd>GitLink!<cr>",
+  { silent = true, noremap = true, desc = "Open git permlink" }
+)
+-- blame
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>Gb",
+  "<cmd>GitLink blame<cr>",
+  { silent = true, noremap = true, desc = "Yank git blame link" }
+)
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>GB",
+  "<cmd>GitLink! blame<cr>",
+  { silent = true, noremap = true, desc = "Open git blame link" }
+)
+-- default branch
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>Gd",
+  "<cmd>GitLink default_branch<cr>",
+  { silent = true, noremap = true, desc = "Copy default branch link" }
+)
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>GD",
+  "<cmd>GitLink! default_branch<cr>",
+  { silent = true, noremap = true, desc = "Open default branch link" }
+)
+-- default branch
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>Gc",
+  "<cmd>GitLink current_branch<cr>",
+  { silent = true, noremap = true, desc = "Copy current branch link" }
+)
+vim.keymap.set(
+  {"n", 'v'},
+  "<leader>GD",
+  "<cmd>GitLink! current_branch<cr>",
+  { silent = true, noremap = true, desc = "Open current branch link" }
+)
