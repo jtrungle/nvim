@@ -12,3 +12,13 @@ vim.api.nvim_create_autocmd({ "FocusLost" }, {
   command = "silent! wall",
   nested = true,
 })
+-- Force emmet LSP to attach to heex files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "heex", "eelixir" },
+  callback = function(args)
+    local clients = vim.lsp.get_clients({ name = "emmet_language_server" })
+    if #clients > 0 then
+      vim.lsp.buf_attach_client(args.buf, clients[1].id)
+    end
+  end,
+})
