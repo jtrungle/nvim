@@ -20,14 +20,14 @@ end, {})
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
 
-local betterTerm = require("betterTerm")
--- toggle firts term
-vim.keymap.set({"n", "t"}, "<C-_>", function() betterTerm.open() end, { desc = "Toggle terminal" })
--- Select term focus
-vim.keymap.set({ "n" }, "<leader>Tt", betterTerm.select, { desc = "Select terminal" })
-
--- Rename the current terminal
-vim.keymap.set("n", "<leader>Tr", betterTerm.rename, { desc = "Rename terminal" })
+-- local betterTerm = require("betterTerm")
+-- -- toggle firts term
+-- vim.keymap.set({"n", "t"}, "<C-_>", function() betterTerm.open() end, { desc = "Toggle terminal" })
+-- -- Select term focus
+-- vim.keymap.set({ "n" }, "<leader>Tt", betterTerm.select, { desc = "Select terminal" })
+--
+-- -- Rename the current terminal
+-- vim.keymap.set("n", "<leader>Tr", betterTerm.rename, { desc = "Rename terminal" })
 
 vim.api.nvim_create_user_command("YankFilePath", function()
   vim.fn.setreg("+", vim.fn.expand("%:p"))

@@ -15,6 +15,7 @@ return {
     },
     keymap = {
       visualise = "<Leader>df",
+      visualise_buf = "<Leader>Bdf",
     },
   },
 

@@ -4,7 +4,6 @@
   "SchemaStore.nvim": { "branch": "main", "commit": "4f5b624100600751eddfafb5d64bc81a1c2b6f70" },
   "aerial.nvim": { "branch": "master", "commit": "8bb8697d180681746da41bef5c8691d04443af36" },
   "bear.nvim": { "branch": "main", "commit": "46ef2945e49633bcf9fc21d3dd8c842021de0ef7" },
-  "betterTerm.nvim": { "branch": "main", "commit": "595e1260f2f418183f14d820692434ef11f4564b" },
   "blink.cmp": { "branch": "main", "commit": "b19413d214068f316c78978b08264ed1c41830ec" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "catppuccin": { "branch": "main", "commit": "ce4a8e0d5267e67056f9f4dcf6cb1d0933c8ca00" },
