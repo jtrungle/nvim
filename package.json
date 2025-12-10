@@ -19,6 +19,12 @@
           "heex"
         ],
         "path": "snippets/daisyui.json"
+      },
+      {
+        "language": [
+          "python"
+        ],
+        "path": "snippets/opens.json"
       }
     ]
   }
