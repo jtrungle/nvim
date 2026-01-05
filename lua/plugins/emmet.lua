@@ -17,8 +17,9 @@ return {
           "typescriptreact",
           "heex",
           "eelixir",
-        }
-      }
+          "astro",
+        },
+      },
     },
   },
 }
